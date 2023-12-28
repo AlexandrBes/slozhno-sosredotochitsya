@@ -21,3 +21,19 @@
     --link-shadow: var(--title-color);
   }
 }
+
+.page.theme_light {
+  --rec-color: var(--background-color);
+  --background-image: url(../images/cover-image-light.png);
+  --main-text-color: #353430;
+  --title-color: #ffc2e6;
+  --title-shadow: #ff0070;
+  --background-color: #fff1f7;
+  --text-title-color: var(--main-text-color);
+  --title-decor: #ff8dcb;
+  --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+  --section-title-color: var(--main-text-color);
+  --border-color: var(--title-shadow);
+  --corners-color: var(--main-text-color);
+  --link-shadow: var(--title-color);
+}

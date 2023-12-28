@@ -6,15 +6,25 @@
 
 .header {
   display: grid;
-  height: 100vh;
+  grid-template-rows: 0fr 1fr;
+  gap: 118px;
+  align-items: center;
+  min-height: 100vh;
   padding: 20px;
   position: relative;
 }
 
+@media (width >= 768px) and (width < 1024px) {
+  .header {
+    grid-template-rows: 2fr 5fr;
+    gap: 0;
+  }
+}
+
 @media (width >= 375px) and (width < 768px) {
   .header {
-    display: block;
     padding: 10px;
+    gap: 10px;
   }
 }
 
@@ -46,13 +56,13 @@
 
 @media (width >= 768px) and (width < 1024px) {
   .header__theme-menu {
-    padding-block-start: 175px;
+    padding-block-start: 22%;
   }
 }
 
 @media (width >= 375px) and (width < 768px) {
   .header__theme-menu {
-    padding-block-start: 65px;
+    padding-block-start: 19%;
   }
 }
 
@@ -101,28 +111,26 @@
 }
 
 .header__title-container {
-  padding: 238px 0 116px;
   display: flex;
   flex-direction: column;
   gap: 76px;
 }
 
+@media (width >= 768px) and (width < 1024px) {
+  .header__title-container {
+    gap: 133px;
+    padding-block-end: 30px ;
+  }
+}
+
 @media (width >= 375px) and (width < 768px) {
   .header__title-container {
-    padding: 67px 0 44px;
     gap: 57px;
   }
 }
 
-@media (width >= 768px) and (width < 1024px) {
-  .header__title-container {
-    padding: 120px 0 143px;
-    gap: 133px;
-  }
-}
-
 .header__title {
-  font-size: 157px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   margin-inline-start: -20px;
   color: var(--title-color);
@@ -131,13 +139,13 @@
 
 @media (width <= 768px) and (width < 1024px) {
   .header__title {
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
 @media (width >= 375px) and (width < 768px) {
   .header__title {
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-inline-start: 0;
     line-height: 82.5%;
   }
@@ -163,7 +171,7 @@
 .main {
   padding: 20px;
   margin-block-start: 40px;
-  margin-block-end: 40px;
+  margin-block-end: 30px;
   display: grid;
   gap: 80px;
 }
@@ -347,9 +355,11 @@
 }
 
 @media (width >= 375px) and (width < 768px) {
+  .footer {
+    padding: 10px;
+  }
   .footer__title {
     font-size: 116px;
-    padding-block-end: 15px;
   }
 }
 
@@ -373,6 +383,7 @@
 @media (width >= 375px) and (width < 768px) {
   .decorated-zone::before {
     left: 10px;
+    bottom: 10px;
   }
 }
 
@@ -390,6 +401,6 @@
 @media (width >= 375px) and (width < 768px) {
   .decorated-zone::after {
     right: 10px;
-    top: 1px;
+    top: 10px;
   }
 }
